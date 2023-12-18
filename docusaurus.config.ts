@@ -2,9 +2,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
-const organizationName = 'BaseMind.AI';
 const discordInviteLink = 'https://discord.gg/ReZ9SZwvwu';
+const docsSiteUrl = 'https://your-docusaurus-site.example.com';
 const logo = 'img/logo.svg';
+const organizationName = 'BaseMind.AI';
 
 const config: Config = {
 	baseUrl: '/',
@@ -34,7 +35,7 @@ const config: Config = {
 	projectName: organizationName,
 	tagline: '',
 	themeConfig: {
-		image: logo,
+		image: 'img/log-with-text.png',
 		navbar: {
 			items: [
 				{
@@ -62,7 +63,7 @@ const config: Config = {
 		},
 	} satisfies Preset.ThemeConfig,
 	title: organizationName,
-	url: 'https://your-docusaurus-site.example.com',
+	url: docsSiteUrl,
 };
 
 export default config;
