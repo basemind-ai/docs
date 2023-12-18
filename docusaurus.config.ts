@@ -2,13 +2,17 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
+const basemind = 'BaseMind.AI';
+const deploymentBranch = 'gh-pages';
 const discordInviteLink = 'https://discord.gg/ReZ9SZwvwu';
 const docsSiteUrl = 'https://your-docusaurus-site.example.com';
 const logo = 'img/logo.svg';
-const organizationName = 'BaseMind.AI';
+const organizationName = 'basemind-ai';
+const repositoryName = 'docs';
 
 const config: Config = {
 	baseUrl: '/',
+	deploymentBranch,
 	favicon: 'img/favicon.ico',
 	i18n: {
 		defaultLocale: 'en',
@@ -32,7 +36,7 @@ const config: Config = {
 			} satisfies Preset.Options,
 		],
 	],
-	projectName: organizationName,
+	projectName: repositoryName,
 	tagline: '',
 	themeConfig: {
 		image: 'img/log-with-text.png',
@@ -52,17 +56,18 @@ const config: Config = {
 				},
 			],
 			logo: {
-				alt: `${organizationName} Logo`,
+				alt: `${basemind} Logo`,
 				src: logo,
 			},
-			title: organizationName,
+			title: basemind,
 		},
 		prism: {
 			darkTheme: prismThemes.dracula,
 			theme: prismThemes.github,
 		},
 	} satisfies Preset.ThemeConfig,
-	title: organizationName,
+	title: basemind,
+	trailingSlash: false,
 	url: docsSiteUrl,
 };
 

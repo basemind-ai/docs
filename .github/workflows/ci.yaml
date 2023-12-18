@@ -1,0 +1,48 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 21
+            - name: Install PNPM
+              uses: pnpm/action-setup@v2.4.0
+              id: pnpm-install
+              with:
+                  version: 8
+                  run_install: false
+            - name: Setup Cache
+              id: pnpm-cache
+              shell: bash
+              run: |
+                  echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+            - name: Load Cached Dependencies
+              uses: actions/cache@v3
+              with:
+                  path: ${{ env.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
+            - name: Install dependencies
+              run: pnpm install --ignore-scripts
+            - name: Lint
+              run: pnpm run lint
+            - name: Format
+              run: pnpm run format
+            - name: Spellcheck
+              run: pnpm run spellcheck
+            - name: Type Check
+              run: pnpm run typecheck

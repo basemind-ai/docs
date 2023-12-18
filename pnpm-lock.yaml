@@ -11,9 +11,15 @@ dependencies:
     '@docusaurus/preset-classic':
         specifier: 3.0.1
         version: 3.0.1(@algolia/client-search@4.22.0)(@types/react@18.2.45)(eslint@8.56.0)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.13.0)(typescript@5.3.3)
+    '@docusaurus/theme-classic':
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@18.2.45)(eslint@8.56.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
     '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.0(@types/react@18.2.45)(react@18.2.0)
+    '@types/node':
+        specifier: ^20.10.5
+        version: 20.10.5
     clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -4625,7 +4631,7 @@ packages:
                 integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==,
             }
         dependencies:
-            '@types/node': 17.0.45
+            '@types/node': 20.10.5
         dev: false
 
     /@types/scheduler@0.16.8:
