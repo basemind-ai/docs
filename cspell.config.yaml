@@ -1,0 +1,10 @@
+---
+dictionaryDefinitions:
+    - name: 'local-dictionary'
+      path: './local-dictionary.txt'
+      addWords: true
+dictionaries:
+    - 'local-dictionary'
+ignorePaths:
+    - 'node_modules'
+    - '/local-dictionary.txt'

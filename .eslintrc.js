@@ -19,7 +19,7 @@ module.exports = {
 			},
 		},
 		{
-			files: ['*.mdx'],
+			files: ['*.md', '*.mdx'],
 			extends: [
 				'plugin:mdx/recommended',
 				'plugin:@docusaurus/recommended',
