@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"strict": true,
+		"strictNullChecks": true
+	},
+	"extends": "@docusaurus/tsconfig"
+}
