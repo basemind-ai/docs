@@ -1,7 +1,7 @@
+*.log
+.DS_Store
 .cache-loader
 .docusaurus
-.DS_Store
 .env.*
-*.log
 build/
 node_modules/
