@@ -4,3 +4,5 @@ slug: /
 ---
 
 # Intro
+
+Welcome to the BaseMind.AI documentation.
