@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"strict": true,
-		"strictNullChecks": true
+		"strictNullChecks": true,
 	},
-	"extends": "@docusaurus/tsconfig"
+	"extends": "@docusaurus/tsconfig",
 }
