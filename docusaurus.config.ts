@@ -11,7 +11,7 @@ const organizationName = 'basemind-ai';
 const repositoryName = 'docs';
 
 const config: Config = {
-	baseUrl: '/docs/',
+	baseUrl: '/',
 	deploymentBranch,
 	favicon: 'img/favicon.ico',
 	i18n: {
